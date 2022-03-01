@@ -1,3 +1,14 @@
+// order of sorting algorithm
+
+// Selection Sort.
+// Bubble Sort.
+// Recursive Bubble Sort.
+// Insertion Sort.
+// Recursive Insertion Sort.
+// Merge Sort.
+// Iterative Merge Sort.
+// Quick Sort.
+
 // selection sorting
 // selecting the minIndex or maxIndex value placing it in order...
 // space complexity O(1) and time complexity O(n^2)
@@ -98,35 +109,35 @@
 // stable algorithm
 // space complexity is O(1) and time complexity is O(n^2) best case O(n)
 
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-void insertionSort(int a[],int n)
-{
-    for(int i=1;i<n;i++)
-    {
-        int temp = a[i];
-        int j;
-        for(j=i-1;j>=0;j--)
-        {
-            if(a[j]>temp)
-            {
-                a[j+1] = a[j];
-            }
-            else
-                break;
-        }
-        a[j+1] = temp;
-    }
-}
+// void insertionSort(int a[],int n)
+// {
+//     for(int i=1;i<n;i++)
+//     {
+//         int temp = a[i];
+//         int j;
+//         for(j=i-1;j>=0;j--)
+//         {
+//             if(a[j]>temp)
+//             {
+//                 a[j+1] = a[j];
+//             }
+//             else
+//                 break;
+//         }
+//         a[j+1] = temp;
+//     }
+// }
 
-int main()
-{
-    int a[]={3,5,7,2,1};
-    int n = sizeof(a) / sizeof(a[0]);
-    insertionSort(a,n);
-    for(int i = 0; i < n; i++)
-    {
-        cout<<a[i]<<" ";
-    }
-}
+// int main()
+// {
+//     int a[]={3,5,7,2,1};
+//     int n = sizeof(a) / sizeof(a[0]);
+//     insertionSort(a,n);
+//     for(int i = 0; i < n; i++)
+//     {
+//         cout<<a[i]<<" ";
+//     }
+// }
