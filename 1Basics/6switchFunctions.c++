@@ -57,7 +57,7 @@
 //     power(a,b);
 // }
 
-// odd or even check using funcions
+// odd or even check using functions
 
 // #include <iostream>
 // using namespace std;
@@ -131,23 +131,23 @@
 // #include <iostream>
 // using namespace std;
 
-int setBits(int a, int b)
-{
-    int count1 = 0;
-    int count2 = 0;
-    while (a != 0 || b != 0)
-    {
-        count1 = count1 + (a & 1);
-        a = a >> 1;
-        count2 = count2 + (b & 1);
-        b = b >> 1;
-    }
+// int setBits(int a, int b)
+// {
+//     int count1 = 0;
+//     int count2 = 0;
+//     while (a != 0 || b != 0)
+//     {
+//         count1 = count1 + (a & 1);
+//         a = a >> 1;
+//         count2 = count2 + (b & 1);
+//         b = b >> 1;
+//     }
 
-    cout << "The set count of a is : " << count1 << endl;
-    cout << "The set count of b is : " << count2 << endl;
-}
+//     cout << "The set count of a is : " << count1 << endl;
+//     cout << "The set count of b is : " << count2 << endl;
+// }
 
-int main()
+// int main()
 // {
 //     int a, b;
 //     cin >> a >> b;

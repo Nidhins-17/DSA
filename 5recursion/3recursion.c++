@@ -200,72 +200,83 @@
 
 // merge sort(faster than earlier)
 
-// #include <iostream>
-// using namespace std;
+#include <iostream>
+using namespace std;
 
-// void merge(int a[],int n,int start,int end)
-// {
-//     int mid = start + (end - start) / 2;
+void generateArray(int *a,int n) 
+{
+    for(int i = 0; i < n; i++)
+    {
+        a[i] = rand()%100;
+    }
+}
 
-//     int l1 = mid - start + 1;
-//     int l2 = end - mid;
+void merge(int a[],int n,int start,int end)
+{
+    int mid = start + (end - start) / 2;
 
-//     int *first = new int [l1];
-//     int *second = new int[l2];
+    int l1 = mid - start + 1;
+    int l2 = end - mid;
 
-//     // copy values
+    int *first = new int [l1];
+    int *second = new int[l2];
 
-//     int mainArrayIndex = start;
-//     for(int i=0; i<l1; i++)
-//         first[i] = a[mainArrayIndex++];
-//     mainArrayIndex = mid + 1;
-//     for(int i=0; i<l2; i++)
-//         second[i] = a[mainArrayIndex++];
+    // copy values
 
-//     // merge two sorted arrays
-//     int index1 = 0;
-//     int index2 = 0;
-//     mainArrayIndex = start;
+    int mainArrayIndex = start;
+    for(int i=0; i<l1; i++)
+        first[i] = a[mainArrayIndex++];
+    mainArrayIndex = mid + 1;
+    for(int i=0; i<l2; i++)
+        second[i] = a[mainArrayIndex++];
 
-//     while(index1< l1 && index2 < l2)
-//     {
-//         if(first[index1] < second[index2])
-//             a[mainArrayIndex++] = first[index1++];
+    // merge two sorted arrays
+    int index1 = 0;
+    int index2 = 0;
+    mainArrayIndex = start;
+
+    while(index1< l1 && index2 < l2)
+    {
+        if(first[index1] < second[index2])
+            a[mainArrayIndex++] = first[index1++];
         
-//         else
-//             a[mainArrayIndex++] = second[index2++];
-//     }
-//     while(index1 < l1)
-//         a[mainArrayIndex++] = first[index1++];
+        else
+            a[mainArrayIndex++] = second[index2++];
+    }
+    while(index1 < l1)
+        a[mainArrayIndex++] = first[index1++];
     
-//     while(index2 < l2)
-//         a[mainArrayIndex++] = second[index2++];
-// }
+    while(index2 < l2)
+        a[mainArrayIndex++] = second[index2++];
+}
 
-// void mergeSort(int a[],int n,int start,int end)
-// {
-//     int mid = start + (end - start) / 2;
-//     // base case
-//     if(start >= end)
-//         return;
+void mergeSort(int a[],int n,int start,int end)
+{
+    int mid = start + (end - start) / 2;
+    // base case
+    if(start >= end)
+        return;
 
-//     // left part sort
-//     mergeSort(a,n,start,mid);
+    // left part sort
+    mergeSort(a,n,start,mid);
 
-//     // right part sort
-//     mergeSort(a,n,mid+1,end);
+    // right part sort
+    mergeSort(a,n,mid+1,end);
 
-//     // merge
-//     merge(a,n,start,end);
-// }
+    // merge
+    merge(a,n,start,end);
+}
 
-// int main()
-// {
-//     int a[] = {2, 4, 3, 1, 5};
-//     int n = sizeof(a) / sizeof(a[0]);
-//     mergeSort(a, n, 0, n - 1);
+int main()
+{
+    int n;
+    printf("Enter the number of elements : ");
+    scanf("%d",&n);
+    int a[n];
+    generateArray(a,n);
+    mergeSort(a, n, 0, n - 1);
 
-//     for(int i=0; i<n; i++)
-//         cout<<a[i]<<" ";
-// }
+    for(int i=0; i<n; i++)
+        cout<<a[i]<<" ";
+}
 

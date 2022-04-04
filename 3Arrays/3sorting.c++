@@ -72,25 +72,25 @@
 // #include <iostream>
 // using namespace std;
 
-// void bubbleSort(int a[], int n)
-// {
-//     // round 1 to n-1;
-//     bool swapp = false;
-//     for (int i = 0; i < n - 1; i++)
-//     {
-//         for (int j = 0; j < n-1-i; j++)//because at last they get sorted(no need to check)
-//         {
-//             if (a[j] > a[j + 1])
-//             {
-//                 swap(a[j], a[j + 1]);
-//                 swapp = true;
-//             }
-//         }
-//         // if already sorted
-//         if(swapp == false)
-//             break;
-//     }
-// }
+void bubbleSort(int a[], int n)
+{
+    // round 1 to n-1;
+    bool swapp = false;
+    for (int i = 0; i < n - 1; i++)
+    {
+        for (int j = 0; j < n-1-i; j++)//because at last they get sorted(no need to check)
+        {
+            if (a[j] > a[j + 1])
+            {
+                swap(a[j], a[j + 1]);
+                swapp = true;
+            }
+        }
+        // if already sorted
+        if(swapp == false)
+            break;
+    }
+}
 
 // int main()
 // {

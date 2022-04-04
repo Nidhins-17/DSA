@@ -19,7 +19,7 @@
 
 //     if(a-- >0 || ++b >2)
 //     {
-//         cout<<"if condition has or then it sees the first and comes in ";
+//         cout<<"if condition has or, then it sees the first and comes in ";
 //     }
 //     else
 //         cout<<"dc";

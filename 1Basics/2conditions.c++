@@ -1,23 +1,25 @@
-// #include <iostream>
-// using namespace std;
-// int main()
-// {
-//     // int a = cin.get();//return a char value
-//     // cout<<a<<endl;//so the output is the ascii values of the character
+//check whether a character is lower cased or upper cased
 
-//     char ch;
-//     // cout<<"Enter the value for char ch"<<endl;
-//     cin>>ch;
-//     int ascii = ch;
-//     if(ch>='a' && ch<='z')
-//         cout<<"the char is Lower cased"<<endl;
-//     else if(ch>='A' && ch<='a')
-//         cout<<"the char is Upper cased"<<endl;
-//     else
-//         cout<<"It is an integer bro"<<endl;
-//     // cout << "The ASCII value of the char is : "<< ascii<<endl;
+#include <iostream>
+using namespace std;
+int main()
+{
+    // int a = cin.get();//return a char value
+    // cout<<a<<endl;//so the output is the ascii values of the character
 
-// }
+    char ch;
+    // cout<<"Enter the value for char ch"<<endl;
+    cin>>ch;
+    int ascii = ch;
+    if(ch>='a' && ch<='z')
+        cout<<"the char is Lower cased"<<endl;
+    else if(ch>='A' && ch<='a')
+        cout<<"the char is Upper cased"<<endl;
+    else
+        cout<<"It is an integer bro"<<endl;
+    cout << "The ASCII value of the char is : "<< ascii<<endl;
+
+}
 
 // sum of n numbers from 1
 
